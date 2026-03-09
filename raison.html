@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>raisons - Club Numérique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f0c29;
+            --accent-purple: #8e2de2;
+            --accent-blue: #4facfe;
+            --text-light: #ffffff;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #24243e);
+            color: var(--text-light);
+            min-height: 100vh;
+        }
+
+        /* Reutilisation du Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            background: linear-gradient(to right, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav a { text-decoration: none; color: white; font-size: 0.9rem; opacity: 0.8; transition: 0.3s; }
+        nav a:hover { opacity: 1; color: var(--accent-blue); }
+
+        /* Contenu des Activités */
+        .container {
+            padding: 60px 8%;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .intro h1 { font-size: 3rem; margin-bottom: 10px; }
+        .intro p { color: var(--accent-blue); font-weight: bold; letter-spacing: 2px; }
+
+        .detail-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .activity-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: var(--glass);
+            border-radius: 30px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            align-items: center;
+        }
+
+        .activity-image {
+            width: 100%;
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .activity-text {
+            padding: 40px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            background: var(--accent-purple);
+            margin-bottom: 15px;
+        }
+
+        .activity-text h2 { margin-bottom: 15px; color: var(--accent-blue); }
+        .activity-text ul { margin: 20px 0; padding-left: 20px; }
+        .activity-text li { margin-bottom: 10px; opacity: 0.9; }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: 40px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 2px solid var(--accent-blue);
+            padding-bottom: 5px;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover { color: var(--accent-blue); }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .activity-section { grid-template-columns: 1fr; }
+            .activity-image { height: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">CLUB NUMÉRIQUE</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="raison.html">raisons</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <h1>pourquoi rejoindre le club?</h1>
+            <p>EXPLORE TES PASSIONS</p>
+        </div>
+
+        <div class="detail-grid">
+            <div class="activity-section">
+                <div class="activity-image" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800');"></div>
+                <div class="activity-text">
+                    <span class="badge">Niveau : Débutant à Avancé</span>
+                    <h2>Développement Fullstack</h2>
+                    <p>Apprends à construire le web de A à Z. Du design de l'interface à la gestion des bases de données.</p>
+                    <ul>
+                        <li>HTML5 / CSS3 Moderne</li>
+                        <li>JavaScript & Frameworks (React)</li>
+                        <li>Déploiement de projets réels</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="activity-section">
+                <div class="activity-text">
+                    <span class="badge">Niveau : Intermédiaire</span>
+                    <h2>Intelligence Artificielle</h2>
+                    <p>Découvre comment les machines apprennent et comment utiliser l'IA pour résoudre des problèmes complexes.</p>
+                    <ul>
+                        <li>Introduction au Python</li>
+                        <li>Machine Learning & Data</li>
+                        <li>Création de Chatbots</li>
+                    </ul>
+                </div>
+                <div class="activity-image" style="background-image: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800');"></div>
+            </div>
+        </div>
+     
+            <div class="activity-section">
+                <div class="activity-text">
+                    <span class="badge" style="background: #0078d4;">Niveau : Tous niveaux</span>
+                    <h2>Maîtrise de la Suite Office</h2>
+                    <p>Apprends à utiliser les outils standards du monde professionnel pour créer des documents percutants et organiser tes projets.</p>
+                    <ul>
+                        <li><strong>Word :</strong> Mise en page avancée et rapports.</li>
+                        <li><strong>Excel :</strong> Gestion de données et formules magiques.</li>
+                        <li><strong>PowerPoint :</strong> Design de présentations captivantes.</li>
+                    </ul>
+                </div>
+            </div>
+
+        
+                <div class="activity-image" style="background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800');"></div>
+            <div>
+            </div>
+        <a href="index.html" class="btn-back">← Retour à l'accueil</a>
+    </div>
+
+</body>
+</html>
