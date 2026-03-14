@@ -164,7 +164,22 @@
         /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
             header { padding: 15px 5%; }
-            nav { display: none; } /* On cache le menu simple sur mobile pour cet exemple */
+            nav { display: flex;
+    align-items: center;
+    /* On aligne tout à gauche pour que les liens collent au logo */
+    justify-content: flex-start; 
+    gap: 30px; /* Ajoute un espace précis entre le logo et les liens */
+    padding: 10px 20px;
+}
+
+/* Si tes liens sont dans une liste (ul) */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px; /* Espace entre Accueil, Raison, etc. */
+}
         }
     </style>
 </head>
@@ -174,7 +189,7 @@
         <div class="logo"> LBGY</div>
         <nav>
             <ul>
-                <li><a href="#">Accueil</a></li>
+                
                 <li><a href="raison.html">raison</a></li>
             </ul>    
         </nav>
